@@ -1,0 +1,50 @@
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<h1>Detalhes do Cliente</h1>
+	<table border="1">
+		<tr>
+			<th>Cpf</th>
+			<th>Nome</th>
+			<th>Genero</th>
+			<th>Email</th>
+			<th>Telefone</th>
+		</tr>
+		<tr>
+			<td><div th:text="${clientes[0].cliente.cpf}">Cpf</div></td>
+			<td><div th:text="${clientes[0].cliente.nome}">Nome</div></td>
+			<td><div th:text="${clientes[0].cliente.genero}">Genero</div></td>
+			<td><div th:text="${clientes[0].cliente.email}">Email</div></td>
+			<td><div th:text="${clientes[0].cliente.telefone}">Telefone</div></td>
+		</tr>
+	</table>	
+	<h2> Endereços do Cliente </h2>
+	<table border="1">
+		<tr>
+			<th>CEP</th>
+			<th>Logradouro</th>
+			<th>Bairro</th>
+			<th>Localidade</th>
+			<th>UF</th>
+			<th>Numero</th>
+		</tr>
+		<div th:each="cliente : ${clientes}">
+			<tr>
+				<td><div th:text="${cliente.cliente.endereco.cep}">CEP</div></td>
+				<td><div th:text="${cliente.cliente.endereco.logradouro}">Logradouro</div></td>
+				<td><div th:text="${cliente.cliente.endereco.bairro}">Bairro</div></td>
+				<td><div th:text="${cliente.cliente.endereco.localidade}">Localidade</div></td>
+				<td><div th:text="${cliente.cliente.endereco.uf}">Estado</div></td>
+				<td><div th:text="${cliente.numero}">Numero</div></td>
+			</tr>
+		</div>
+	</table>
+	<br>
+	<a href="/cliente/menu"><button href="/cliente/menu">Voltar</button></a>
+</body>
+
+</html>

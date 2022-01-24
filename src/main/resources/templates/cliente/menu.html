@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+	</head>
+	
+	<body>
+		<h1>API do Arnaldo</h1>
+		<nav>
+			<a href="/cliente/redirectCriar"><button>Cadastrar Cliente</button></a>
+		</nav>
+		<table border="1">
+			<tr>
+				<th>Nome</th>
+				<th>Email</th>
+				<th>Telefone</th>
+				<th>Cidade</th>
+				<th>Detalhes</th>
+				<th>Deletar</th>
+			</tr>
+			<div th:each="cliente : ${clientes}">
+				<tr>
+					<td><div th:text="${cliente.nome}">Nome</div></td>
+					<td><div th:text="${cliente.email}">Email</div></td>
+					<td><div th:text="${cliente.telefone}">Telefone</div></td>
+					<td><div th:text="${cliente.endereco.localidade}">Cidade</div></td>
+					<td><div><a th:href="@{/cliente/detalhar?cpf={cpf}(cpf=${cliente.cpf})}">Detalhar</div></a></td>
+					<td><div><a th:href="@{/cliente/deletar?cpf={cpf}(cpf=${cliente.cpf})}">Deletar</div></a></td>
+				</tr>
+			</div>
+		</table>
+	</body>
+</html>
