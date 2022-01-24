@@ -37,7 +37,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### Detalhes
 
-Sendo meu primeiro projeto prático com Spring (anteriormente havia apenas estudado e documentado sobre o framework) e JPA, creio que ficou muito básico, principalmente devido ao tempo gasto com bugs com o thymeleaf no html, onde acabei patinando por muito tempo, inclusive no bug do CEP que me consumiu diversas horas e não encontrei solução.
+O programa se resume na listagem de clientes no endpoint Menu, cadastro, exclusão e detalhes, todos sendo alcançados através da navegação em tela.
+O Login e Senha estão chumbados com os valores passados na proposta do projeto.
+O Banco de dados em H2, possui 3 tabelas, sendo Cliente, Endereço e ClienteEndereco. Permitindo que um endereço possua diversos clientes e um cliente possua diversos endereços.
+
+Sendo meu primeiro projeto prático com Spring (anteriormente havia apenas estudado e documentado sobre o framework) e JPA, creio que ficou muito básico, principalmente devido ao tempo gasto com bugs com o thymeleaf no html, onde acabei patinando por muito tempo, inclusive no bug do CEP que me consumiu diversas horas e não encontrei solução e no update de informações, que acabei não terminando.
 Ps: Como vão perceber, front end não é o meu forte kkk.
 
 ### Bugs
